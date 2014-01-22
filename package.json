@@ -1,0 +1,39 @@
+{
+  "name": "app-test",
+  "description": "prototype of the seat finder",
+  "version": "0.1.0",
+  "homepage": "https://github.com/kaelzhang/app-m-seat-finder",
+  "author": {
+    "name": "kael",
+    "email": "i@kael.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kaelzhang/app-m-seat-finder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kaelzhang/app-m-seat-finder/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/kaelzhang/app-m-seat-finder/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-mocha": "~0.3.1",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-concat": "~0.1.2",
+    "grunt-contrib-uglify": "~0.1.1",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-watch": "~0.2.0"
+  },
+  "keywords": []
+}
