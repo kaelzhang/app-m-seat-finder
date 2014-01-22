@@ -25,7 +25,8 @@ cortex config registry http://registry.cortex.dp/
 
 cortex build
 
-cortex server &> /dev/null || echo "cortex server already started"
-anywhere 9987 && echo "server started at localhost:9987"
+cortex server || echo "cortex server already started" &
 
-open "http://localhost:9987/index.html"
+node server/app &
+
+open "http://localhost:9987/?page=order&usertoken=12312312312313"

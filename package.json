@@ -35,7 +35,8 @@
     "dependencies": {
       "request": "~0.2.0",
       "jquery": "~1.9.2",
-      "url": "~1.0.0"
+      "url": "~1.0.0",
+      "tpl": "~0.2.0"
     },
     "asyncDependencies": {},
     "devDependencies": {},
@@ -43,6 +44,12 @@
       "prebuild": [
         "grunt"
       ]
+    },
+    "directories": {
+      "css": "css"
     }
+  },
+  "dependencies": {
+    "express": "~3.4.8"
   }
 }
