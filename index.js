@@ -1,24 +1,18 @@
-
-// Opt in to strict mode of JavaScript, [ref](http://is.gd/3Bg9QR)
-// Use this statement, you can stay away from several frequent mistakes 
 'use strict';
 
-// How to use a foreign module ?
-// Take 'sample-cortex-project' for example:
-//
-// 1. to install a dependency, exec the command below inside the current repo:
-// 		cortex install sample-cortex-project --save
-// 2. use `require(module_idendifier)` method:
-// 		var hello = require('sample-cortex-project');
+var url = require('url');
 
-// `exports` is the API of the current module
-exports.my_method = function() {
-    // your code...
+var pages = {
+    'order' : require('./page/order'),
+    'admin' : require('./page/admin'),
+    // '404'   : require('./page/404')
 };
 
-// or you could code like this:
-// 		module.exports = {
-// 			my_method: function() {
-// 	    		hello();
-// 			}
-// 		};
+exports.init = function () {
+    var query = url.parse(location.href, true).query;
+    console.log('query:', query)
+
+    var controller = pages[query.page] || pages['404'];
+
+    controller.render(query);
+};
