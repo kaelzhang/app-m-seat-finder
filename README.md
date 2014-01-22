@@ -1,10 +1,12 @@
-# app-test
+# app-m-seat-finder
 
 > prototype of the seat finder
 
 ## Installation
 
 First, you need to install [node.js](http://nodejs.org)
+
+Then
 
 ```sh
 make install
