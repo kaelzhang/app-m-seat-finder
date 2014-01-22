@@ -1,5 +1,5 @@
 {
-  "name": "app-test",
+  "name": "app-m-seat-finder",
   "description": "prototype of the seat finder",
   "version": "0.1.0",
   "homepage": "https://github.com/kaelzhang/app-m-seat-finder",
@@ -27,13 +27,22 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-mocha": "~0.3.1",
-    "grunt-contrib-connect": "~0.3.0",
-    "grunt-contrib-concat": "~0.1.2",
-    "grunt-contrib-uglify": "~0.1.1",
-    "grunt-contrib-jshint": "~0.1.1",
-    "grunt-contrib-watch": "~0.2.0"
+    "grunt": "~0.4.2",
+    "grunt-tpl2mod": "~0.1.1"
   },
-  "keywords": []
+  "keywords": [],
+  "cortex": {
+    "dependencies": {
+      "request": "~0.2.0",
+      "jquery": "~1.9.2",
+      "url": "~1.0.0"
+    },
+    "asyncDependencies": {},
+    "devDependencies": {},
+    "scripts": {
+      "prebuild": [
+        "grunt"
+      ]
+    }
+  }
 }
