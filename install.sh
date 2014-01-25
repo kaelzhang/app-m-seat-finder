@@ -11,6 +11,8 @@ test_cli npm || {
     exit 1
 }
 
+npm install
+
 test_cli cortex || {
     echo "To install cortex, we need super"
     sudo npm install -g cortex
