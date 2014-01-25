@@ -13,16 +13,17 @@ order.render = function (query) {
     function start () {
         order._get_data(query.usertoken, function (json) {
             order._apply_data(json);
+            // order.
         })
     }
 
-    setInterval(start, 3000);
+    // setInterval(start, 3000);
     start();
 };
 
 
 order._apply_data = function (json) {
-    $('#container').html(templateFn(json));
+    $('#wrap').empty().html(templateFn(json));
 };
 
 
@@ -33,5 +34,4 @@ order._get_data = function (token, callback) {
 
     }).on('success', callback).send();
 };
-
 
