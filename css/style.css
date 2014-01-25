@@ -31,6 +31,20 @@ h2{ font-weight:bold; font-size: 14px; line-height:25px; color:#999693; padding:
 .shop-info .info .pic
 { background-image:url(img/sprite.png) ; background-repeat:no-repeat; background-size:250px auto;}
 
+.item-rank-rst{ 
+    float: left; width:84px; height: 16px; margin: 3px 12px 0 0; text-indent: -9999px; overflow: hidden; 
+    background-image:url(img/remark.png); background-repeat:no-repeat;background-size:87px auto;
+}
+.irr-star0 { background-position: 0 -92px;}
+.irr-star5 { background-position: 0 -153px;}
+.irr-star10 { background-position: 0 -74px;}
+.irr-star20 { background-position: 0 -56px;}
+.irr-star30 { background-position: 0 -37px;}
+.irr-star35 { background-position: -1px -133px;}
+.irr-star40 { background-position: 0 -19px;}
+.irr-star45 { background-position: 0 -112px;}
+.irr-star50 { background-position: 0 0;}
+
 
 body{
     background:#f7f7f7;
@@ -69,6 +83,12 @@ header{
 .shop-info .info .item-rank-rst{ margin-bottom:4px;}
 .shop-info .info p{ overflow:hidden; zoom:1;line-height: 30px;}
 .shop-info .info .pic{ float:left; margin-left:-120px;_display:inline; padding:10px 8px 10px 9px; background-position:-42px -84px; background-size:169px auto; width:100px; height:75px;}
+
+.shop-info .info .rating {
+    line-height: 30px;
+    padding-top:10px;
+}
+
 .shop-info .info .desc span{ padding-right:2px;}
 .shop-info .info .pic img{ width:100px; height:75px;}
 
@@ -142,6 +162,7 @@ header{
 
 .table .add{
     position: relative;
+    cursor: pointer;
 }
 
 .table .add span {
@@ -161,4 +182,51 @@ header{
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
 }
-    
+
+.table-disable{
+    opacity: .2;
+}
+
+.table-disable .add{
+    display: none;
+}
+
+.table-selected .add span:nth-child(odd){
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+.table-selected .add span:nth-child(even){
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+
+.table-pending .add span:nth-child(odd){
+    display: none;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg) translateZ(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateZ(0);
+  }
+}
+
+.table-pending .add span:nth-child(even){
+    height: 30px;
+    background: url(img/loading.png);
+    -webkit-animation: loading 1s infinite linear;
+    top: 35px;
+}
+
