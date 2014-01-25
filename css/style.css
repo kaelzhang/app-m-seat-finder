@@ -142,6 +142,7 @@ header{
 
 .table .add{
     position: relative;
+    cursor: pointer;
 }
 
 .table .add span {

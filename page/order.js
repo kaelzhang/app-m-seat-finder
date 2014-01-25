@@ -17,7 +17,7 @@ order.render = function (query) {
         })
     }
 
-    // setInterval(start, 3000);
+    setInterval(start, 3000);
     start();
 };
 
