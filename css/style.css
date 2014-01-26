@@ -76,10 +76,11 @@ header{
     padding:10px 20px;
     border-bottom:1px solid #ff8400;
     box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    color:#999;
 }
-.shop-info .name{ padding-bottom:14px;padding-top:4px;}
+.shop-info .name{ padding-bottom:14px;padding-top:4px; color:#323232;}
 .shop-info .name h1{ font-size:18px; font-weight: normal;}
-.shop-info .info{ padding-left:120px; color:#999; font-size:14px; line-height:25px;}
+.shop-info .info{ padding-left:120px; font-size:14px; line-height:25px;}
 .shop-info .info .item-rank-rst{ margin-bottom:4px;}
 .shop-info .info p{ overflow:hidden; zoom:1;line-height: 30px;}
 .shop-info .info .pic{ float:left; margin-left:-120px;_display:inline; padding:10px 8px 10px 9px; background-position:-42px -84px; background-size:169px auto; width:100px; height:75px;}
@@ -91,6 +92,18 @@ header{
 
 .shop-info .info .desc span{ padding-right:2px;}
 .shop-info .info .pic img{ width:100px; height:75px;}
+
+.shop-info .my .num{
+    font-size: 50px;
+    padding: 0 5px;
+    color: #ff8400;
+}
+
+.shop-info .my .left{
+    font-size: 18px;
+    padding: 0 3px;
+    color: #323232;
+}
 
 .table{
     margin: 10px 10px 0;
@@ -183,11 +196,11 @@ header{
     transform: rotate(90deg);
 }
 
-.table-disable{
+.table-disabled{
     opacity: .2;
 }
 
-.table-disable .add{
+.table-disabled .add{
     display: none;
 }
 
