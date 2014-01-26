@@ -1,10 +1,10 @@
-module.exports= '<div class="shop-info clearfix">'+
-'<div class="name"><h1>废哥餐厅</h1></div>'+
-''+
-'<?js'+
+module.exports= '<?js'+
 'var my = it.my;'+
 ''+
-'if (my) {'+
+'?><div class="shop-info clearfix">'+
+'<div class="name"><h1>废哥餐厅</h1></div>'+
+''+
+'<?js if (my) {'+
 '?><div class="my">我是<span class="num">@{my.table.toUpperCase()}@{my.num}</span>号，前面还有<span class="left">@{my.left}</span>桌</div>'+
 '</div><?js'+
 ''+
@@ -29,7 +29,13 @@ module.exports= '<div class="shop-info clearfix">'+
 '<?js'+
 ''+
 'it.tables.forEach(function(table){'+
-'?><li class="table clearfix" data-table="@{table.name}">'+
+'var klass = !my'+
+'? \'\''+
+': my.table === table.name'+
+'? \'table-selected \''+
+': \'table-disabled \';'+
+''+
+'?><li class="table @{klass}clearfix" data-table="@{table.name}">'+
 '<div class="name">'+
 '<span class="id">@{table.name.toUpperCase()}</span>'+
 '<span class="unit"> 桌</span>'+
