@@ -86,7 +86,7 @@ order._getData = function (token, callback) {
 
     } else {
         new Ajax({
-            url: '/my-webapp/tables.jsp?token=' + token,
+            url: '/my-webapp/tables.jsp?usertoken=' + token,
             method: 'get'
 
         }).on('success', callback).send();
@@ -161,7 +161,7 @@ Tables.prototype._initTable = function(table) {
 function Table (table, query) {
     this.table = table;
     this.query = query;
-    this.name = this.table.attr('data-name');
+    this.name = this.table.attr('data-table');
     this.add = this.table.find('.add');
 
     this._bind();
@@ -177,7 +177,7 @@ Table.prototype._bind = function() {
         e.preventDefault();
 
         if ( self.isSelected() ) {
-            alert('目前还不支持删除订位');
+            alert('抱歉，目前还不支持删除订位');
 
         } else if ( !self.isDisabled() && !self.isPending() ) {
             self.pending(function () {

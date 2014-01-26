@@ -153,7 +153,7 @@ Tables.prototype._initTable = function(table) {
 function Table (table, query) {
     this.table = table;
     this.query = query;
-    this.name = this.table.attr('data-name');
+    this.name = this.table.attr('data-table');
     this.add = this.table.find('.add');
 
     this._bind();
