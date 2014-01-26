@@ -36,7 +36,9 @@
       "request": "~0.2.0",
       "jquery": "~1.9.2",
       "url": "~1.0.0",
-      "tpl": "~0.2.0"
+      "tpl": "~0.2.0",
+      "util": "~1.0.0",
+      "events": "~1.0.0"
     },
     "asyncDependencies": {},
     "devDependencies": {},
