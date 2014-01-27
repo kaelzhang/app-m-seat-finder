@@ -25,8 +25,6 @@ order._render = function () {
             return;
         }
 
-        json.my.left = 0;
-
         order._applyData(json);
 
         var header = $('#header');
@@ -185,7 +183,7 @@ Table.prototype._bind = function() {
         e.preventDefault();
 
         if ( self.isSelected() ) {
-            alert('抱歉，目前还不支持删除订位');
+            alert('抱歉，目前小二还没有习得删除技能\n(￣︶￣)');
 
         } else if ( !self.isDisabled() && !self.isPending() ) {
             self.pending(function () {
