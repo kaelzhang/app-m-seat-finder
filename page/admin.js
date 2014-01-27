@@ -93,7 +93,7 @@ order._takeTable = function (name, token, callback) {
         callback({})
     } else {
         new Ajax({
-            url: "take.jsp",
+            url: "admin.jsp",
             data: {
                 table: name
             }

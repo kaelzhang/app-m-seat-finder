@@ -5,8 +5,13 @@ module.exports= '<?js'+
 '<div class="name"><h1>废哥餐厅</h1></div>'+
 ''+
 '<?js if (my) {'+
-'?><div class="my">我是<span class="num">@{my.table.toUpperCase()}@{my.num}</span>号，前面还有<span class="left">@{my.left}</span>桌</div>'+
-'</div><?js'+
+'?><div class="my">我是<span class="num">@{my.table.toUpperCase()}@{my.num}</span>号<?js'+
+'if (my.left) {'+
+'?>，前面还有<span class="left">@{my.left}</span>桌</div><?js'+
+'} else {'+
+'?>，<span class="your-turn">客官轮到您了！</span><?js'+
+'}'+
+'?></div><?js'+
 ''+
 '} else {'+
 '?><div class="info">'+

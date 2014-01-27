@@ -25,12 +25,20 @@ order._render = function () {
             return;
         }
 
+        json.my.left = 0;
+
         order._applyData(json);
 
         var header = $('#header');
 
         if ( json.my ) {
             header.text('排位中...');
+
+            if ( json.my.left < 1 ) {
+                order.pause();
+                alert('客官轮到您了！');
+            }
+
         } else {
             header.text('叫号');
         }
