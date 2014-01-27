@@ -86,7 +86,7 @@ order._getData = function (token, callback) {
 
     } else {
         new Ajax({
-            url: '/my-webapp/tables.jsp?usertoken=' + token,
+            url: 'tables.jsp?usertoken=' + token,
             method: 'get'
 
         }).on('success', callback).send();
@@ -100,7 +100,7 @@ order._takeTable = function (name, token, callback) {
 
     } else {
         new Ajax({
-            url: "/my-webapp/take.jsp",
+            url: "take.jsp",
             data: {
                 table: name,
                 usertoken: token
