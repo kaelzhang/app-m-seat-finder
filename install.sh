@@ -33,3 +33,4 @@ cortex server || echo "cortex server already started" &
 node server/app &
 
 open "http://localhost:9987/?page=order&usertoken=12312312312313"
+# open "http://localhost:9987/?page=admin"
